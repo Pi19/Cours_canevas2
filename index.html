@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cours Canvas</title>
+    <link rel="stylesheet" href="css/bootstrap.mainty.min.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style media="screen">
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    td{
+      padding: 6px;
+      font-size: 14px;
+    }
+    .swiper-container,
+    #main {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+     
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        overflow: none;
+    }
+    .list-group-item:hover,
+    .list-active{
+    	background-color: #3492D4;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="grid" id="main">
+      <div class="col-xs-3" style="height: 100%;">
+	      <div class="thumbnail" style="margin-top: 1em;">
+	        <img src="image/canvas.jpg" style="background-color: white;">
+	      </div>
+      
+        <ul class="list-group" id="menuMetiers">
+          <li class="list-group-item "> 
+            <a href="#" style="display: block;" class="tablinks" onclick="openContenu(event, 'Presentation_session')" id="defaultOpen">Présentation de la session</a>
+          </li>
+          <li class="list-group-item "> 
+            <a href="#" style="display: block;" class="tablinks"  onclick="openContenu(event, 'couleur')">Mettre de couleur et de fond </a>
+          </li>
+          <li class="list-group-item "> 
+            <a href="#" style="display: block;" class="tablinks"  onclick="openContenu(event, 'différentes_formes')">Dessiner différentes formes de lignes  </a>
+          </li>
+          <li class="list-group-item "> 
+            <a href="#" style="display: block;" class="tablinks"  onclick="openContenu(event, 'ombrages')">Faire des ombrages </a>
+          </li>
+          <li class="list-group-item "> 
+            <a href="#" style="display: block;" class="tablinks"  onclick="openContenu(event, 'couleur_dégradé')">Mettre de couleur dégradé  </a>
+          </li>
+          <li class="list-group-item "> 
+            <a href="#" style="display: block;" class="tablinks"  onclick="openContenu(event, 'forme_texte')">Mettre en forme de textes </a>
+          </li>
+        </ul>
+    
+        
+      </div>
+      <!--Presentation de la session!-->
+      <div class="tabcontent col-xs-9" style="height: 100%;margin-top:30px;" id="Presentation_session">
+        <div class="swiper-container" style="cursor: grab;">
+            <div class="swiper-wrapper"  class="grid" id="content">
+                 <div class = "swiper-slide row" >
+                   <div class="col-xs-12"> <h1 class="badge " style="font-size:30px;">Présentation de la session</h1></div>
+                   <div class="row">
+                     <div class="col-xs-12 text-justify"><blockquote>A la suite de la session 1, la session abordera le cours permettant d’enrichir le contenu d’un canavas avec :
+                      Mettre de couleur de contour et de fond
+                      Dessiner différentes formes de lignes
+                      Comment faire des ombrages ?
+                      Mettre de couleur dégradé
+                      Mettre en forme de textes  .</blockquote></div>
+                   </div>
+                   <div class="row" >
+                     <div class = "col-xs-6"></div>
+                     <div class="col-xs-6"></div>
+                   </div>
+                 </div>
+            </div>
+            
+        </div>
+      </div>
+
+       <!--Mettre de couleur de contour et de fond!-->
+     <div class="tabcontent col-xs-9" style="height: 100%;margin-top:30px;" id="couleur">
+        <div class="swiper-container" style="cursor: grab;">
+            <div class="swiper-wrapper"  class="grid" id="content">
+                 <div class = "swiper-slide row">
+                   <div class="col-xs-12"> <h1 class="badge " style="font-size:30px;">Mettre de couleur de contour et de fond</h1></div>
+                   <div class="row">
+                     <div class="col-xs-12" class="text-justify">
+                         <blockquote> </blockquote>
+                      </div>
+                   </div>
+                   <div class="row" >
+                     <div class = "col-xs-6">
+                      <pre>
+                        <h6 style="margin-left: -370px;margin-top: -20px ">&lt;!DOCTYPE html&gt;</h6>
+                        <h5 style="color: #3492D4;margin: -40px 0px 0px -350px;">&lt;html lang="fr"&gt;</h5>
+                            <h5 style="color: #3492D4;margin: -30px 0px 0px -370px;">&lt;body&gt;</h5><h5 style="color: #3492D4;margin: -15px 0px 0px -300px;">&lt;p&gt;</h5><texte style="margin-left:-80px;">Voici mon premier canvas</texte> <h5 style="color: #3492D4;margin: -5px 0px 0px -300px;" >&lt;/p&gt;</h5>
+                                 <h5 style="color: #3492D4;margin: -30px 0px 0px 10px;">&lt;canvas id="moncanvas" width="200" height="200"&gt;</h5> 
+                                 <h6 style="margin-top:-30px;">Votre navigateur ne supporte pas canvas !</h6> 
+                                 <h5 style="color: #3492D4;margin: -50px 0px 0px -280px;">&lt;/canvas&gt;</h5>
+                                 <h5 style="color: #3492D4;margin: -34px 0px 0px -280px;">&lt;script&gt;</h5>
+                                 <h6 style="color: rgb(145, 137, 24);margin: -34px 0px 0px -10px;">var canvas = document.getElementById('monCanvas'); </h6>
+                                 <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -130px;">var ctx = canvas.getContext('2d');</h6>  
+                                 <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -230px;">ctx.beginPath();</h6>
+                                 <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -179px;">ctx.rect(200, 50, 140, 70);</h6>
+                                 <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -197px;">ctx.fillStyle = 'orange';</h6> 
+                                 <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -275px;">ctx.fill();</h6> 
+                                 <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -223px;">ctx.lineWidth = 5;</h6> 
+                                 <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -184px;">ctx.strokeStyle = 'green';</h6> 
+                                 <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -258px;">ctx.stroke();</h6> 
+                                 <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -240px;">ctx.closePath();</h6>     
+                                 <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -240px;">ctx.beginPath();</h6> 
+                                 <h6 style="color: rgb(132, 158, 16);margin: -30px 0px 0px -170px;">ctx.fillRect(200,160, 140, 70);</h6> 
+                                 <h6 style="color: rgb(145, 137, 24); margin: -30px 0px 0px -232px;">ctx.closePath();</h6>   
+                                 <h6 style="color: rgb(156, 225, 111);margin: -30px 0px 0px -230px;">ctx.beginPath();</h6> 
+                                 <h6 style="color: rgb(70, 160, 11);margin: -30px 0px 0px -130px;">ctx.strokeRect(200, 220, 220, 140);</h6> 
+                                 <h6 style="color: rgb(156, 225, 111);margin: -30px 0px 0px -232px;">ctx.closePath();</h6> 
+                                 <h5 style="color: #3492D4;margin: -34px 0px 0px -280px;">&lt;/script&gt;</h5>
+                           <h5 style="color: #3492D4;margin: -30px 0px 0px -370px;">&lt;/body&gt;</h5>
+                     
+                       </pre>
+                       
+                     </div>
+                     <div class="col-xs-6">
+                       
+                          <table class="text-justify">
+                            <tr>
+                              <th rowspan="5" ><img src="image/strokefillRect.png" style="background-color: black;width:200px;height:100px ;"></th>
+                              <td style="padding: 10px ;" >fill() : pour remplir la forme </td>
+                            </tr>
+                            <tr>
+                              <td>stroke(); : pour le contour de la forme</td>
+                            </tr>
+                            <tr>
+                                <td> strokeStyle : couleur du contour</td>
+                              </tr>
+                              <tr>
+                                  <td>fillStyle :couleur de fond</td>
+                              </tr>
+                              <tr>
+                                  <td>lineWidth : taille du contour</td>
+                              </tr>
+                            <tr>
+                              <td><img src="image/stroke.png" style="background-color: black;width:200px;height:100px ;"></td>
+                              <td> strokeRect (x,y width , height) : rectangle en coutour coloré</td>
+                            </tr>
+                            <tr>
+                                <td><img src="image/fill.png" style="background-color: black;width:200px;height:100px  ;"></td>
+                                <td> fillRect(x,y , with , height) : reectangle en fond coloré </td>
+                              </tr>
+                              <tr>
+                                  <td><img src="image/lineCap.png" style="background-color: black;width:200px;height:100px  ;"></td>
+                                  <td> lineCap = "" ; : édition des fins de lignes ,avec les paramètres (round , butt , square)</td>
+                                </tr>
+                          </table>
+                       
+                      </div>
+                   </div>
+                 </div>
+            </div>
+        </div>
+      </div>
+     <!-- Différentes formes de lignes !-->
+     <div class="tabcontent col-xs-9" style="height: 100%;margin-top:30px;" id="différentes_formes">
+      <div class="swiper-container" style="cursor: grab;">
+          <div class="swiper-wrapper"  class="grid" id="content">
+               <div class = "swiper-slide row" >
+                 <div class="col-xs-12"> <h1 class="badge " style="font-size:30px;">Dessiner différentes formes de lignes</h1></div>
+                 <div class="row">
+                   <div class="col-xs-12"><blockquote></blockquote></div>
+                 </div>
+                 <div class="row" >
+                   <div class = "col-xs-6">
+                      <pre>
+                          <h6 style="margin-left: -370px;margin-top: -20px ">&lt;!DOCTYPE html&gt;</h6>
+                          <h5 style="color: #3492D4;margin: -40px 0px 0px -350px;">&lt;html lang="fr"&gt;</h5>
+                              <h5 style="color: #3492D4;margin: -30px 0px 0px -370px;">&lt;body&gt;</h5><h5 style="color: #3492D4;margin: -15px 0px 0px -300px;">&lt;p&gt;</h5><texte style="margin-left:-80px;">Voici mon premier canvas</texte> <h5 style="color: #3492D4;margin: -5px 0px 0px -300px;" >&lt;/p&gt;</h5>
+                                   <h5 style="color: #3492D4;margin: -30px 0px 0px 10px;">&lt;canvas id="moncanvas" width="200" height="200"&gt;</h5> 
+                                   <h6 style="margin-top:-30px;">Votre navigateur ne supporte pas canvas !</h6> 
+                                   <h5 style="color: #3492D4;margin: -50px 0px 0px -280px;">&lt;/canvas&gt;</h5>
+                                   <h5 style="color: #3492D4;margin: -34px 0px 0px -280px;">&lt;script&gt;</h5>
+                                   <h6 style="color: rgb(145, 137, 24);margin: -34px 0px 0px -10px;">var canvas = document.getElementById('monCanvas'); </h6>
+                                   <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -130px;">var ctx = canvas.getContext('2d');</h6>  
+                                   <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -230px;">ctx.beginPath();</h6>
+                                   <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -213px;">ctx.moveTo(20,20);</h6>
+                                   <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -125px;">ctx.quadraticCurveTo(100,25,0,50);;</h6>
+                                   <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -197px;">ctx.fillStyle = 'orange';</h6> 
+                                   <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -275px;">ctx.fill();</h6> 
+                                   <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -234px;">ctx.closePath();</h6>  
+                                   <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -234px;">ctx.beginPath();</h6> 
+                                   <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -220px;">ctx.moveTo(50,50);</h6>
+                                   <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -93px;">ctx.bezierCurveTo(0,125,300,175,150,300);</h6> 
+                                   <h6 style="color: rgb(145, 137, 24); margin: -30px 0px 0px -236px;">ctx.closePath();</h6>   
+                                   <h5 style="color: #3492D4;margin: -34px 0px 0px -280px;">&lt;/script&gt;</h5>
+                             <h5 style="color: #3492D4;margin: -30px 0px 0px -370px;">&lt;/body&gt;</h5>
+                       
+                         </pre>
+                  </div>
+                   <div class="col-xs-6 text-justify">
+                        <table>
+                            <tr>
+                                <td><img src="image/quadratic.png" style="background-color: black;width:200px;height:100px  ;"></td>
+                                <td> quadraticCurveTo(cp1x ,cp1y, x, y ) : Dessiner une courbe de Bézier quadratique depuis la position courante du stylo jusqu'au point final spécifié par x et y, en utilisant le point de contrôle spécifié par cp1x et cp1y.</td>
+                               
+                              </tr>
+                              <tr>
+                                 <td><img src="image/bezier.png" style="background-color: black;width:200px;height:100px  ;"> </td>
+                                  <td>bezierCurveTo(cp1x ,cp1y , cp2x ,cp2y , x ,y ) : Dessiner une courbe de Bézier cubique depuis la position courante du stylo jusqu'au point spécifié par x et y, en utilisant les points de contrôle (cp1x, cp1y) et (cp2x, cp2y).</td>
+                              </tr>
+                              
+                        </table>
+                  </div>
+                 </div>
+               </div>
+          </div>
+      </div>
+    </div>
+      <!--Faire des ombrages!-->
+      <div class="tabcontent col-xs-9" style="height: 100%;margin-top:30px;" id="ombrages">
+        <div class="swiper-container" style="cursor: grab;">
+            <div class="swiper-wrapper"  class="grid" id="content">
+                 <div class = "swiper-slide row" >
+                   <div class="col-xs-12"> <h1 class="badge " style="font-size:30px;">Faire des ombrages </h1></div>
+                   <div class="row">
+                     <div class="col-xs-12"><blockquote></blockquote></div>
+                   </div>
+                   <div class="row" >
+                     <div class = "col-xs-6">
+                        <pre>
+                            <h6 style="margin-left: -370px;margin-top: -20px ">&lt;!DOCTYPE html&gt;</h6>
+                            <h5 style="color: #3492D4;margin: -40px 0px 0px -350px;">&lt;html lang="fr"&gt;</h5>
+                               <h5 style="color: #3492D4;margin: -30px 0px 0px -370px;">&lt;head&gt;</h5>
+                                    <h5 style="color: #3492D4;margin: -28px 0px 0px -370px;">&lt;title&gt;</h5><texte style="margin: -23px 0px 0px -230px;">Utiliser le canvas</texte> 
+                                    <h5 style="color: #3492D4;margin: -20px 0px 0px -370px;">&lt;/title&gt;</h5> 
+                               <h5 style="color: #3492D4;margin: -30px 0px 0px -370px;">&lt;/head&gt;</h5>
+                                <h5 style="color: #3492D4;margin: -30px 0px 0px -370px;">&lt;body&gt;</h5><h5 style="color: #3492D4;margin: -15px 0px 0px -300px;">&lt;p&gt;</h5><texte style="margin-left:-80px;">Voici mon premier canvas</texte> <h5 style="color: #3492D4;margin: -5px 0px 0px -300px;" >&lt;/p&gt;</h5>
+                                     <h5 style="color: #3492D4;margin: -30px 0px 0px 10px;">&lt;canvas id="moncanvas" width="200" height="200"&gt;</h5> 
+                                     <h6 style="margin-top:-30px;">Votre navigateur ne supporte pas canvas !</h6> 
+                                     <h5 style="color: #3492D4;margin: -50px 0px 0px -280px;">&lt;/canvas&gt;</h5>
+                                     <h5 style="color: #3492D4;margin: -34px 0px 0px -280px;">&lt;script&gt;</h5>
+                                     <h6 style="color: rgb(145, 137, 24);margin: -34px 0px 0px -10px;">var canvas = document.getElementById('monCanvas'); </h6>
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -130px;">var ctx = canvas.getContext('2d');</h6>  
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -230px;">ctx.beginPath();</h6>
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -185px;">ctx.shadowOffsetX = -9;</h6>
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -185px;">ctx.shadowOffsetY = -9;</h6>
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -185px;">ctx.shadowColor = 'red';</h6> 
+                                     <h6 style="color:rgb(145, 137, 24);margin: -30px 0px 0px -208px;">ctx.shadowBlur = 4;</h6>
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -170px;">ctx.fillRect(10,10,100,100);</h6> 
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -232px;">ctx.closePath();</h6>       
+                                     <h5 style="color: #3492D4;margin: -34px 0px 0px -280px;">&lt;/script&gt;</h5>
+                               <h5 style="color: #3492D4;margin: -30px 0px 0px -370px;">&lt;/body&gt;</h5>
+                             <h5 style="color: #3492D4;margin: -10px 0px 0px -400px;">&lt;/html&gt;</h5>
+                           </pre>
+                     </div>
+                     <div class="col-xs-6 text-justify">
+                          <table>
+                            <tr>
+                              <td>shadowOffsetX; </td>
+                              <td>Il peut être une valeur entier positive ou négative/ Le décalage x de l'ombre </td>
+                            </tr>
+                            <tr>
+                                <td>shadowOffsetY; </td>
+                                <td> Il peut être une valeur entier positive ou négative / Le décalage y de l'ombre</td>
+                            </tr>
+                            <tr>
+                                <td>shadowBlur; </td>
+                                <td>définir la taille de l'effet de flou sur l'ombre</td>
+                            </tr>
+                            <tr>
+                                <td>shadowColor; </td>
+                                <td>couleur de l'ombre</td>
+                            </tr>
+                            <tr>
+                                <td><img src="image/shadow.png" style="background-color: black;width:200px;height:100px  ;"></td>
+                                <td> tracer  un rectangle avec ombre en rouge </td>
+                            </tr>
+                            
+                          </table>
+                     </div>
+                   </div>
+                 </div>
+            </div>
+        </div>
+      </div>
+      <!--Mettre de couleur dégradé !-->
+      <div class="tabcontent col-xs-9" style="height: 100%;margin-top:30px;" id="couleur_dégradé">
+        <div class="swiper-container" style="cursor: grab;">
+            <div class="swiper-wrapper"  class="grid" id="content">
+                 <div class = "swiper-slide row" >
+                   <div class="col-xs-12"> <h1 class="badge " style="font-size:30px;">Mettre de couleur dégradé </h1></div>
+                   <div class="row" >
+                     <div class = "col-xs-6">
+                        <pre>
+                            <h6 style="margin-left: -370px;margin-top: -20px ">&lt;!DOCTYPE html&gt;</h6>
+                            <h5 style="color: #3492D4;margin: -40px 0px 0px -350px;">&lt;html lang="fr"&gt;</h5>
+                               <h5 style="color: #3492D4;margin: -30px 0px 0px -370px;">&lt;head&gt;</h5>
+                                    <h5 style="color: #3492D4;margin: -28px 0px 0px -370px;">&lt;title&gt;</h5><texte style="margin: -23px 0px 0px -230px;">Utiliser le canvas</texte> 
+                                    <h5 style="color: #3492D4;margin: -20px 0px 0px -370px;">&lt;/title&gt;</h5> 
+                               <h5 style="color: #3492D4;margin: -30px 0px 0px -370px;">&lt;/head&gt;</h5>
+                                <h5 style="color: #3492D4;margin: -30px 0px 0px -370px;">&lt;body&gt;</h5><h5 style="color: #3492D4;margin: -15px 0px 0px -300px;">&lt;p&gt;</h5><texte style="margin-left:-80px;">Voici mon premier canvas</texte> <h5 style="color: #3492D4;margin: -5px 0px 0px -300px;" >&lt;/p&gt;</h5>
+                                     <h5 style="color: #3492D4;margin: -30px 0px 0px 10px;">&lt;canvas id="moncanvas" width="200" height="200"&gt;</h5> 
+                                     <h6 style="margin-top:-30px;">Votre navigateur ne supporte pas canvas !</h6> 
+                                     <h5 style="color: #3492D4;margin: -50px 0px 0px -280px;">&lt;/canvas&gt;</h5>
+                                     <h5 style="color: #3492D4;margin: -34px 0px 0px -280px;">&lt;script&gt;</h5>
+                                     <h6 style="color: rgb(145, 137, 24);margin: -34px 0px 0px -10px;">var canvas = document.getElementById('monCanvas'); </h6>
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -130px;">var ctx = canvas.getContext('2d');</h6>  
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -230px;">ctx.beginPath();</h6>
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -35px;"> var gradient = ctx.createLinearGradient(0, 0, 200, 0);</h6>
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -150px;">gradient.addColorStop(0, 'red');</h6>
+                                      <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -130px;">gradient.addColorStop(1, 'white');</h6>
+                                      <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -200px;">ctx.fillStyle = gradient;</h6>
+                                      <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -160px;">ctx.fillRect(10, 10, 200, 100);;</h6>
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -232px;">ctx.closePath();</h6>     
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -230px;">ctx.beginPath();</h6>
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -35px;"> var gradient = ctx.createRadialGradient(0, 0, 200, 0);</h6>
+                                     <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -150px;">gradient.addColorStop(0, 'white');</h6>
+                                      <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -130px;">gradient.addColorStop(1, 'blue');</h6>
+                                      <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -200px;">ctx.fillStyle = gradient;</h6>
+                                      <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -160px;">ctx.fillRect(10, 10, 200, 100);</h6>
+                                     <h5 style="color: #3492D4;margin: -34px 0px 0px -280px;">&lt;/script&gt;</h5>
+                               <h5 style="color: #3492D4;margin: -30px 0px 0px -370px;">&lt;/body&gt;</h5>
+                             <h5 style="color: #3492D4;margin: -10px 0px 0px -400px;">&lt;/html&gt;</h5>
+                                
+                           </pre>
+                          
+
+                     </div>
+                     <div class="col-xs-6">
+                        <table>
+                          <tr>
+                            <th rowspan = '4'><img src="image/linear.png" style="background-color: black;width:250px;height:100px ; ;"></th>
+                           
+                          </tr>
+                          <tr>
+                              <td>createLinearGradient(x1, y1, x2, y2) : un gradient linéaire de couleur suivant le vecteur ;  </td>
+                          </tr>
+                          <tr>
+                              <td>x1 : La coordonnée sur l'axe des x du point de début/y2 : La coordonnée sur l'axe des y du point de début.</td>
+                          </tr>
+                          <tr>
+                              <td>x2  : La coordonnée sur l'axe des y du point de fin /  y2 : La coordonnée sur l'axe des y du point de fin.  </td>
+                          </tr>
+                          <tr>
+                            <th rowspan = '2'><img src="image/radial.png" style="background-color: black;width:250px;height:100px ; ;"></th>
+                            <td>createRadialGradient(x1, y1, r1, x2, y2, r2): un gradient circulaire de couleurs entre le cercle centré sur (x1, y1) et de rayon r1 et le cercle (x2, y2) et de rayon r2.  </td>
+                          </tr>
+                          <tr>
+                             <td> addColorStop ([offset],[color]) </td>
+                          </tr>
+                        </table>
+                     </div>
+                   </div>
+                 </div>
+            </div>
+        </div>
+      </div>
+         <!--Mettre en forme de textes  !-->
+     <div class="tabcontent col-xs-9" style="height: 100%;margin-top:30px;" id="forme_texte">
+      <div class="swiper-container" style="cursor: grab;">
+          <div class="swiper-wrapper"  class="grid" id="content">
+               <div class = "swiper-slide row" >
+                 <div class="col-xs-12"> <h1 class="badge " style="font-size:30px;">Mise en forme du texte </h1></div>
+                 <div class="row">
+                   <div class="col-xs-12"><blockquote> </blockquote></div>
+                 </div>
+                 <div class="row" >
+                   <div class = "col-xs-6">
+                    <pre>
+                      <h6 style="margin-left: -370px;margin-top: -20px ">&lt;!DOCTYPE html&gt;</h6>
+                      <h5 style="color: #3492D4;margin: -40px 0px 0px -350px;">&lt;html lang="fr"&gt;</h5>
+                          <h5 style="color: #3492D4;margin: -30px 0px 0px -370px;">&lt;body&gt;</h5><h5 style="color: #3492D4;margin: -15px 0px 0px -300px;">&lt;p&gt;</h5><texte style="margin-left:-80px;">Voici mon premier canvas</texte> <h5 style="color: #3492D4;margin: -5px 0px 0px -300px;" >&lt;/p&gt;</h5>
+                               <h5 style="color: #3492D4;margin: -30px 0px 0px 10px;">&lt;canvas id="moncanvas" width="200" height="200"&gt;</h5> 
+                               <h6 style="margin-top:-30px;">Votre navigateur ne supporte pas canvas !</h6> 
+                               <h5 style="color: #3492D4;margin: -50px 0px 0px -280px;">&lt;/canvas&gt;</h5>
+                               <h5 style="color: #3492D4;margin: -34px 0px 0px -280px;">&lt;script&gt;</h5>
+                               <h6 style="color: rgb(145, 137, 24);margin: -34px 0px 0px -10px;">var canvas = document.getElementById('monCanvas'); </h6>
+                               <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -130px;">var ctx = canvas.getContext('2d');</h6>  
+                               <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -230px;">ctx.beginPath();</h6>
+                               <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -179px;">ctx.font="50px Sans-Serif";</h6>
+                               <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -197px;">ctx.fillStyle = 'orange';</h6> 
+                               <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -115px;">ctx.fillText("COURS CANVAS",20,70);</h6>  
+                               <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -235px;">ctx.closePath();</h6>     
+                               <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -235px;">ctx.beginPath();</h6> 
+                               <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -105px;">ctx.font="normal bold 50px Sans-serif";</h6> 
+                               <h6 style="color: rgb(145, 137, 24);margin: -30px 0px 0px -178px;">ctx.strokeStyle = '#ff00ff';;</h6> 
+                               <h6 style ="color: rgb(145, 137, 24) ; margin: -30px 0px 0px -98px; ">ctx.strokeText("COURS CANVAS",20,40); </h6>
+                               <h6 style="color: rgb(145, 137, 24); margin: -30px 0px 0px -232px;">ctx.closePath();</h6>   
+                               <h5 style="color: #3492D4;margin: -34px 0px 0px -280px;">&lt;/script&gt;</h5>
+                         <h5 style="color: #3492D4;margin: -30px 0px 0px -370px;">&lt;/body&gt;</h5>
+                   
+                     </pre>
+                   </div>
+                   <div class="col-xs-6"> 
+                      <table class="text-justify">
+                          <tr>
+                            <th rowspan="5" ><img src="image/formeText.png" style="background-color: black;width:200px;height:100px ;"></th>
+                            <td style="padding: 10px ;" >stroke() : pour remplir la forme </td>
+                          </tr>
+                          <tr>
+                            <td>fill(); : pour  remplir  la forme/strokeStyle : couleur du contour</td>
+                          </tr>
+                          <tr>
+                              <td>fillText(message,x,y) / strokeText(message, x, y) </td>
+                            </tr>
+                            <tr>
+                                <td>fillStyle :couleur de fond / StrokeStyle : couleur du contour</td>
+                            </tr>
+                            <tr>
+                                <td>font ([font style] [font weight] [font size] [font face]) : style du text</td>
+                            </tr>
+                        </table>
+                 </div>
+               </div>
+          </div>
+      </div>
+    </div>
+  
+    </div>
+        
+    <script>
+   
+
+function openContenu(evt, contName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(contName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+        ///Creation menu index
+      
+        //Creation du contenus
+       
+    </script>
+  </body>
+</html>
